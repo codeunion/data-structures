@@ -2,6 +2,10 @@
 
 A _data structure_ is a particular pattern for organizing information in order to make interacting with that information in the ways we want less expensive.  If this sounds abstract, let's consider some examples.
 
+## The Rules
+
+The only rule is that you can't use any built-in Ruby data structures.  That means no `Array`, no `Hash`, and no `Set`.  You can use built-in Ruby primitives, though, like `Fixnum`, `String`, `nil`, `true`, and `false`.
+
 ## Examples
 
 1.  Phone books are organized alphabetically by last name, which makes it easy to find the phone number if we know someone's last name.

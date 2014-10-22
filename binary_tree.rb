@@ -21,7 +21,6 @@ class BinaryTree
   def each(&block)
   end
 
-
   # Implement pre-order traversal of the tree
   def pre_order(&block)
   end

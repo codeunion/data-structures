@@ -1,3 +1,8 @@
+require_relative 'linked_list'
+
+# Implement a "min stack" - a stack that has a contant-time
+# "minimum" operations.
+
 class MinStack
   def initialize
   end

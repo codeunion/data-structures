@@ -1,4 +1,9 @@
-# Note: all operations should take O(1) time
+require_relative 'linked_list'
+# Implement a Queue using a linked list
+# Note:
+#   1. All operations should take O(1) time
+#   2. You'll need to modify the LinkedList to achieve constant
+#      time enqueue and dequeue operations.
 
 class Queue
   def initialize

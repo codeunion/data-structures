@@ -1,4 +1,9 @@
+require_relative 'linked_list'
+
+# Implement a Stack class using a linked list
+
 class Stack
+  class UnderflowError < StandardError; end
   def initialize
   end
 

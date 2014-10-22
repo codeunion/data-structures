@@ -26,5 +26,3 @@ A _data structure_ is a particular pattern for organizing information in order t
     - Finding all transactions that occurred within a certain range of time
 
     Depending on our situation, we might care about some of these more than others.
-
-(...to be continued)

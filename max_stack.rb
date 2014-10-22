@@ -1,4 +1,9 @@
-class MaxStack
+require_relative 'linked_list'
+
+# Implement a "max stack" - a stack that has a contant-time
+# "maximum" operations.
+
+class MaxStack < Stack
   def initialize
   end
 

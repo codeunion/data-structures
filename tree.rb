@@ -1,3 +1,5 @@
+require_relative 'linked_list'
+
 def Tree(value)
   case value
   when Tree
@@ -13,13 +15,13 @@ class Tree
   attr_reader :value, :children
   def initialize(value)
     @value    = value
-    @children = []
+    @children = LinkedList.new
   end
 
   # Add a new child to this node
   # O(1) time
-  def append_child(value)
-    @children.push(Tree(value))
+  def add_child(value)
+    @children.unshift(Tree(value))
   end
 
   def each(&block)

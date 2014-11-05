@@ -2,15 +2,17 @@ class LinkedList
   # By implementing LinkedList#each, we can include Enumerable
   include Enumerable
 
-  attr_reader :head
+  attr_reader :head, :length
 
   def initialize
-    @head = Node.new(nil)
+    @head = LinkedListNode.new(nil)
+    @length = 0
   end
 
   # O(1) time
   def unshift(value)
     @head = @head.insert_before(value)
+    @length += 1
 
     self
   end
@@ -18,7 +20,9 @@ class LinkedList
   # O(1) time
   def shift
     result = @head.value
-    @head = Node(@head.next)
+    @head = LinkedListNode(@head.next)
+    @length -= 1
+
     result
   end
 
@@ -40,20 +44,20 @@ class LinkedList
 
 end
 
-# This allows us to call Node(value) and is different
-# than the class "Node".  This is how Ruby methods
+# This allows us to call LinkedListNode(value) and is different
+# than the class "LinkedListNode".  This is how Ruby methods
 # like Integer(value), Array(value), String(value), etc.
 # work.
-def Node(value)
+def LinkedListNode(value)
   case value
-  when Node
+  when LinkedListNode
     value
   else
-    Node.new(value)
+    LinkedListNode.new(value)
   end
 end
 
-class Node
+class LinkedListNode
   include Enumerable
 
   attr_accessor :value, :next
@@ -64,18 +68,23 @@ class Node
   end
 
   # O(1) time
-  # Insert +value+ before this Node and return new Node
-  def insert_before(value)
-    node = Node(value)
-    @next = node
+  # Insert +value+ after this LinkedListNode and return new LinkedListNode
+  def insert_after(value)
+    node = LinkedListNode(value)
+
+    node.next = self.next if self.next
+    self.next = node
+
     node
   end
 
   # O(1) time
-  # Insert +value+ after this Node and return new Node
-  def insert_after(value)
-    node = Node(value)
+  # Insert +value+ before this LinkedListNode and return new LinkedListNode
+  def insert_before(value)
+    node = LinkedListNode(value)
+
     node.next = self
+
     node
   end
 

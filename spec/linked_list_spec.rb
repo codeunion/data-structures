@@ -55,7 +55,4 @@ describe LinkedList do
       end
     end
   end
-
-  describe '#head' do
-  end
 end

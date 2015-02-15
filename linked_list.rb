@@ -58,8 +58,6 @@ def LinkedListNode(value)
 end
 
 class LinkedListNode
-  include Enumerable
-
   attr_accessor :value, :next
 
   def initialize(value = nil, next_node = nil)

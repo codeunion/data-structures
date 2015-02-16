@@ -1,4 +1,4 @@
-require_relative 'linked_list'
+require_relative "linked_list"
 # Implement a Queue using a linked list
 # Note:
 #   1. All operations should take O(1) time

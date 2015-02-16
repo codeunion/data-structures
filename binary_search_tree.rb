@@ -1,4 +1,4 @@
-require_relative 'binary_tree'
+require_relative "binary_tree"
 
 # Implement a binary search tree.
 # See http://en.wikipedia.org/wiki/Binary_search_tree

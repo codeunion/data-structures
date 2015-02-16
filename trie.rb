@@ -1,4 +1,4 @@
-require_relative 'tree'
+require_relative "tree"
 
 # Implement a Trie (sometimes called a "prefix tree")
 # See: http://en.wikipedia.org/wiki/Trie

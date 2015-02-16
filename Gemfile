@@ -1,6 +1,6 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'rspec'
+gem "rspec"
 
-gem 'rubocop'
-gem 'rubocop-rspec'
+gem "rubocop"
+gem "rubocop-rspec"

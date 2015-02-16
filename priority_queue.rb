@@ -1,4 +1,4 @@
-require_relative 'binary_heap'
+require_relative "binary_heap"
 
 # Implement a priority queue using a heap
 # See: http://en.wikipedia.org/wiki/Priority_queue

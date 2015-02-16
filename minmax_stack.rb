@@ -1,4 +1,4 @@
-require_relative 'linked_list'
+require_relative "linked_list"
 
 # Implement a "min-max stack" - a stack that has contant-time
 # "maximum" _and_ "minimum" operations.

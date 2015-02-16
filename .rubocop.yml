@@ -1,7 +1,15 @@
 require: rubocop-rspec
 
+# No not require use of described_class in specs
+RSpec/DescribedClass:
+  Enabled: false
+
 Style/AlignParameters:
   EnforcedStyle: with_fixed_indentation
+
+Style/Blocks:
+  Exclude:
+    - spec/**/*_spec.rb
 
 Style/Documentation:
   Enabled: false
@@ -16,12 +24,11 @@ Style/HashSyntax:
 Style/IfUnlessModifier:
   Enabled: false
 
-Style/MethodCallParentheses:
-  Enabled: false
-
+# Do not require implicit self
 Style/RedundantSelf:
   Enabled: false
 
+# Prefer double-quoted strings by default
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: double_quotes

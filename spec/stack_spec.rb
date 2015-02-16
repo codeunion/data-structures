@@ -17,17 +17,17 @@ describe Stack do
     it "makes the stack non-empty" do
       stack = Stack.new
 
-      expect do
+      expect {
         stack.push("waffles")
-      end.to change(stack, :empty?).from(true).to(false)
+      }.to change(stack, :empty?).from(true).to(false)
     end
 
     it "increases the size of the stack by 1" do
       stack = Stack.new
 
-      expect do
+      expect {
         stack.push("waffles")
-      end.to change(stack, :size).by(1)
+      }.to change(stack, :size).by(1)
     end
   end
 
@@ -45,17 +45,17 @@ describe Stack do
       stack = Stack.new
       stack.push("waffles")
 
-      expect do
+      expect {
         stack.pop
-      end.to change(stack, :size).by(-1)
+      }.to change(stack, :size).by(-1)
     end
 
     it "raises an UnderflowError when stack is empty" do
       stack = Stack.new
 
-      expect do
+      expect {
         stack.pop
-      end.to raise_error(Stack::UnderflowError)
+      }.to raise_error(Stack::UnderflowError)
     end
   end
 
@@ -79,9 +79,9 @@ describe Stack do
       stack = Stack.new
       stack.push("waffles")
 
-      expect do
+      expect {
         stack.peek
-      end.not_to change(stack, :size)
+      }.not_to change(stack, :size)
     end
   end
 

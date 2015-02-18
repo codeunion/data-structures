@@ -21,7 +21,7 @@ class LinkedList
   def shift
     result = @head.value
     @head = LinkedListNode(@head.next)
-    @length -= 1
+    @length = [length - 1, 0].max
 
     result
   end

@@ -39,6 +39,7 @@ describe LinkedList do
 
   describe "#shift" do
     let(:list) { LinkedList.new }
+
     context "when the list is non-empty" do
       before { list.unshift(5) }
 
@@ -52,6 +53,24 @@ describe LinkedList do
         list.unshift(7227)
 
         expect(list.shift).to eq(7227)
+      end
+    end
+
+    context "when the list is empty" do
+      it "returns nil" do
+        expect(list.shift).to be_nil
+      end
+
+      it "keeps the list flagged as empty" do
+        expect {
+          list.shift
+        }.not_to change(list, :empty?).from(true)
+      end
+
+      it "keeps the list size at 0" do
+        expect {
+          list.shift
+        }.not_to change(list, :length).from(0)
       end
     end
   end
